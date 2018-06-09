@@ -54,7 +54,7 @@ class ApplicationController < Sinatra::Base
     erb :account
   end
 
-  patch "/account/:id" do
+  patch "/account" do
     @user = find_by_id(params[:id])
     if params[:depost]
       @user.balance += params[:deposit]
