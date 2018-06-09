@@ -2,7 +2,7 @@
 
 <p>We are currently working on your account.</p>
 <p> Welcome to your account, <%= current_user.username %>!</p>
-<p> Your balance is: $ <%= current_user.balance.round(2) %></p>
+<p> Your balance is: $<%= current_user.balance.round(2) %></p>
 <form action='/account' method='POST'>
   <input name="_method" type="hidden" value="patch"
 
