@@ -52,6 +52,7 @@ class ApplicationController < Sinatra::Base
 
   patch "/account" do
     @user = current_user
+    balance = @user.balance.to_f
     deposited = params[:deposit].to_f
     withdrawn = params[:withdraw].to_f
     #binding.pry
