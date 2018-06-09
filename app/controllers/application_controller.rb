@@ -53,10 +53,10 @@ class ApplicationController < Sinatra::Base
   patch "/account" do
     @user = current_user
     #binding.pry
-    if params[:depost] > 0.0
+    if !params[:depost].nil?
       @user.balance = @user.balance.to_f + params[:deposit].to_f
       @user.save
-    elsif  0.0 < params[:withdraw] && params[:withdraw] <= @user.balance.to_f
+    elsif  !params[:withdraw].nil? && 0.0 < params[:withdraw] && params[:withdraw] <= @user.balance.to_f
       binding.pry
       @user.balance = @user.balance.to_f - params[:withdraw].to_f
       @user.save
