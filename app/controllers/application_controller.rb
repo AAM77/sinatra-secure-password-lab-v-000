@@ -53,12 +53,14 @@ class ApplicationController < Sinatra::Base
     @user = current_user
     if params[:depost]
       @user.balance += params[:deposit].to_f
+      @user.save
     elsif params[:withdraw]
       @user.balance -= params[:withdraw].to_f
+      @user.save
     else
       @user.balance = @user.balance
+      @user.save
     end
-    @user.save
     redirect '/account'
   end
 
