@@ -55,6 +55,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/account/:id"
+end
 
   get "/failure" do
     erb :failure
