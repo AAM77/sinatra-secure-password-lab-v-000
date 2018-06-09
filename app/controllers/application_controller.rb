@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/account" do
-    @user = find_by_id(params[:id])
+    @user = current_user
     erb :account
   end
 
