@@ -49,7 +49,8 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  post "/account/:id" do
+  get "/account/:id" do
+
   end
 
   get "/failure" do
