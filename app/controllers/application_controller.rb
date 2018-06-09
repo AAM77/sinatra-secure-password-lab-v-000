@@ -53,10 +53,10 @@ class ApplicationController < Sinatra::Base
   patch "/account" do
     @user = current_user
     if params[:depost]
-      @user.balance.to_f += params[:deposit].to_f
+      @user.balance = @user.balance.to_f + params[:deposit].to_f
       @user.save
     elsif params[:withdraw]
-      @user.balance.to_f -= params[:withdraw].to_f
+      @user.balance -= params[:withdraw].to_f
       @user.save
     else
       @user.balance = @user.balance
