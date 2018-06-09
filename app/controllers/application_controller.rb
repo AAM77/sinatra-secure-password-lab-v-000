@@ -51,6 +51,7 @@ class ApplicationController < Sinatra::Base
 
   get "/account/:id" do
     @user = find_by_id(params[:id])
+    erb :account
   end
 
   get "/failure" do
