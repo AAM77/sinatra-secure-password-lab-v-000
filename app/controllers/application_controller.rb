@@ -52,6 +52,7 @@ class ApplicationController < Sinatra::Base
 
   patch "/account" do
     @user = current_user
+    deposit = params[:deposit].to_f
     #binding.pry
     if !params[:depost].nil? && params[:deposit] > 0.0
       @user.balance = @user.balance.to_f + params[:deposit].to_f
