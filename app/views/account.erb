@@ -7,11 +7,11 @@
   <input name="_method" type="hidden" value="patch"
 
   <label for="deposit">Deposit Money: </label>
-  <input type="number" value="<%= @user.balance" name="deposit">
+  <input type="number" value="<%= @user.balance %>" name="deposit">
   <button type="submit">Deposit</button>
   <br>
   <label for="withdraw" method="POST">Withdraw Money: </label>
-  <input type="number" name="withdraw">
+  <input type="number" value="<%= @user.balance %>" name="withdraw">
   <button type="submit">Withdraw</button>
 
   <br>
