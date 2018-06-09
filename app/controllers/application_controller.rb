@@ -49,11 +49,6 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get "/account" do
-    @user = current_user
-    erb :account
-  end
-
   patch "/account" do
     @user = current_user
     if params[:depost]
