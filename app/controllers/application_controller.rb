@@ -58,6 +58,7 @@ class ApplicationController < Sinatra::Base
     else
       @user.balance = @user.balance
     end
+    redirect '/account'
   end
 
   get "/failure" do
