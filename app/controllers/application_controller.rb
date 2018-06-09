@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/account/:id" do
-
+    @user = current_user
   end
 
   get "/failure" do
