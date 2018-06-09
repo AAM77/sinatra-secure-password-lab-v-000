@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  post "/adjust_balance" do
+  post "/account/:id" do
   end
 
   get "/failure" do
