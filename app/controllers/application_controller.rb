@@ -33,7 +33,6 @@ class ApplicationController < Sinatra::Base
     erb :account
   end
 
-
   get "/login" do
     erb :login
   end
@@ -49,6 +48,8 @@ class ApplicationController < Sinatra::Base
       redirect '/failure'
     end
   end
+
+  post "/adjust_balance"
 
   get "/failure" do
     erb :failure
