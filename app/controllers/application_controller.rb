@@ -50,6 +50,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/adjust_balance" do
+  end
 
   get "/failure" do
     erb :failure
