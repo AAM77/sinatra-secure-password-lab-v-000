@@ -56,7 +56,7 @@ class ApplicationController < Sinatra::Base
       @user.balance = @user.balance.to_f + params[:deposit].to_f
       @user.save
     elsif params[:withdraw]
-      @user.balance -= params[:withdraw].to_f
+      @user.balance = @user.balance.to_f - params[:withdraw].to_f
       @user.save
     else
       @user.balance = @user.balance
