@@ -57,7 +57,7 @@ class ApplicationController < Sinatra::Base
     withdrawn = params[:withdraw].to_f
     #binding.pry
     if !deposited.nil? && deposited > 0.0
-      @user.balance = @user.balance.to_f + deposited
+      @user.balance = balance + deposited
       @user.save
     elsif  !withdrawn.nil? && 0.0 < withdrawn && withdrawn <= @user.balance.to_f
       binding.pry
