@@ -64,7 +64,7 @@ class ApplicationController < Sinatra::Base
       @user.balance = balance - withdrawn
       @user.save
     else
-      @user.balance = @user.balance
+      @user.balance = balance
       @user.save
     end
     redirect '/account'
