@@ -55,7 +55,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/account" do
-    @user = find_by_id(params[:id])
+    @user = current_user
     if params[:depost]
       @user.balance += params[:deposit]
     elsif params[:withdraw]
