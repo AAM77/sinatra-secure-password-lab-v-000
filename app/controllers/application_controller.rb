@@ -60,6 +60,8 @@ class ApplicationController < Sinatra::Base
       @user.balance += params[:deposit]
     elsif params[:withdraw]
       @user.balance -= params[:withdraw]
+    else
+      @user.balance = @user.balance
   end
 
   get "/failure" do
