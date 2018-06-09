@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  post "/adjust_balance"
+  post "/adjust_balance" do
 
   get "/failure" do
     erb :failure
