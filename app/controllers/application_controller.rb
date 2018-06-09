@@ -58,15 +58,13 @@ class ApplicationController < Sinatra::Base
     #binding.pry
     if !deposited.nil? && deposited > 0.0
       @user.balance = balance + deposited
-      @user.save
     elsif  !withdrawn.nil? && (0.0 < withdrawn) && (withdrawn <= balance)
       #binding.pry
       @user.balance = balance - withdrawn
-      @user.save
     else
       @user.balance = balance
-      @user.save
     end
+    @user.save
     redirect '/account'
   end
 
