@@ -55,6 +55,8 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/account/:id" do
+    @user = find_by_id(params[:id])
+  end
 
   get "/failure" do
     erb :failure
