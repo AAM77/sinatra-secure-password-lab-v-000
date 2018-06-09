@@ -4,6 +4,7 @@
 <p> Welcome to your account, <%= current_user.username %>!</p>
 <p> Your balance is: <%= current_user.balance %></p>
 <form action='/account/<%= current_user.balance %>' method='POST'>
+  <input name="_method" type="hidden" value="patch"
   <label for="deposit">Deposit Money: </label>
   <input type="number" name="deposit">
   <button type="submit">Deposit</button>
